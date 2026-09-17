@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter do Litoral — dados que viram decisão | Praia Digital</title>
+<meta name="description" content="Receba toda semana preços, ocupação e oportunidades do mercado imobiliário do litoral paulista no seu e-mail.">
+<link rel="canonical" href="https://praia.digital/newsletter-hub/">
+<meta name="robots" content="index, follow">
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif}
+body{margin:0;background:#0c4a6e;color:#e0f2fe;min-height:100vh}
+.wrap{max-width:640px;margin:0 auto;padding:40px 20px}
+.hero{text-align:center;padding:20px 0}
+.hero h1{font-size:32px;margin:0 0 10px}
+.card{background:#075985;border:1px solid #0ea5e9;border-radius:16px;padding:24px;margin-top:20px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #38bdf8;background:#0c4a6e;color:#e0f2fe;margin-top:8px;box-sizing:border-box;font-size:15px}
+button{background:#f59e0b;color:#451a03;border:0;padding:14px 22px;border-radius:12px;font-weight:800;cursor:pointer;margin-top:14px;font-size:16px;width:100%}
+.ok{background:#022c22;border-color:#10b981;text-align:center}
+.ed{border-left:4px solid #38bdf8;padding:10px 14px;margin-top:12px;background:rgba(255,255,255,.06);border-radius:0 12px 12px 0}
+.ed b{display:block}
+.btn{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:12px;background:#1f6feb;color:#fff;text-decoration:none;font-weight:700}
+small{opacity:.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>📬 Newsletter do Litoral</h1>
+    <p>Toda semana: preços do m², ocupação de temporada e as melhores oportunidades — direto no seu e-mail.</p>
+  </div>
+  <div class="card" id="form">
+    <label>Seu melhor e-mail</label>
+    <input id="email" type="email" placeholder="voce@email.com">
+    <label>Seu perfil</label>
+    <select id="perfil" style="width:100%;padding:12px;border-radius:10px;border:1px solid #38bdf8;background:#0c4a6e;color:#e0f2fe;margin-top:8px">
+      <option>Quero investir em temporada</option>
+      <option>Sou anfitrião/proprietário</option>
+      <option>Sou corretor</option>
+      <option>Quero comprar para morar</option>
+    </select>
+    <button onclick="assinar()">Assinar grátis</button>
+    <small>Sem spam. Cancele quando quiser.</small>
+  </div>
+  <div class="card ok" id="ok" style="display:none"></div>
+  <div class="card">
+    <h2>Últimas edições</h2>
+    <div class="ed"><b>Semana 37 — Ocupação bate 65% no Guarujá</b>Diárias subindo 12% para o feriadão. Veja os números.</div>
+    <div class="ed"><b>Semana 36 — Bertioga: a queridinha dos investidores</b>m² ainda 35% abaixo de Santos, com valorização acelerada.</div>
+    <div class="ed"><b>Semana 35 — Reserva direta: +R$ 12 mil/ano</b>Como anfitriões estão fugindo das comissões das OTAs.</div>
+  </div>
+  <a class="btn" href="https://praiadigital.github.io/blog-litoral/">Blog do Litoral</a>
+  <a class="btn" href="https://praiadigital.github.io/radar-precos/">Radar de Preços</a>
+  <a class="btn" href="https://praiadigital.github.io/guia-litoral/">Guia do Litoral</a>
+</div>
+<script>
+function assinar(){
+  const e=document.getElementById('email').value.trim();
+  if(!e.includes('@')){alert('Informe um e-mail válido.');return;}
+  document.getElementById('form').style.display='none';
+  const ok=document.getElementById('ok');ok.style.display='block';
+  ok.innerHTML='<h2>✅ Inscrição confirmada!</h2><p>Bem-vindo(a), assinante do perfil <strong>'+document.getElementById('perfil').value+'</strong>. A próxima edição chega sexta-feira no seu e-mail.</p><p>Enquanto isso, explore o <a style="color:#34d399" href="https://praiadigital.github.io/apps/">hub de apps</a> da rede.</p>';
+}
+</script>
+<hr style="margin:40px 0 20px;border:none;border-top:1px solid #0284c7">
+<nav style="font-size:.95em;text-align:center;padding:0 16px 32px;color:#7dd3fc">
+<strong>Rede Praia Digital:</strong><br>
+<a style="color:#7dd3fc" href="https://praia.digital/">Praia Digital</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/apps/">Todos os apps</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/blog-litoral/">Blog</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/radar-precos/">Radar de Preços</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/guia-litoral/">Guia do Litoral</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/alerta-precos/">Alerta de Preços</a> ·
+<a style="color:#7dd3fc" href="https://praiadigital.github.io/investidores/">Investidores</a>
+</nav>
+</body>
+</html>
